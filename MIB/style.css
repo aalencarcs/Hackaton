@@ -1,0 +1,356 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Matrix', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    background-color: black;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
+}
+
+.nav-links a {
+    color: #fff;
+    padding-top: 10%;
+}
+
+/* LOGO */
+.logo {
+    font-size: 32px;
+    padding-left: -5%;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+    position: relative;
+}
+
+.dropdown {
+    background-color: bla;
+    padding: 1em 0;
+    position: absolute;
+    /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+.dropdown li+li {
+    margin-top: 10px;
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+.dropdown li:hover {
+    background-color: black;
+    color: white;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox] {
+    display: none;
+}
+
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color: white;
+        transition: 0.3s ease;
+    }
+
+    .menu li+li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    .dropdown li:hover {
+        background-color: white;
+    }
+}
+
+
+.wanted {
+    color: red;
+    display: flex;
+    justify-content: center;
+    padding-top: 7%;
+}
+
+.numberOne {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: flex;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.firstImage {
+    margin-bottom: 100px;
+}
+
+.images p {
+    color: red;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.firstImage p {
+    color: red;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.wanted {
+    font-size: 70px;
+    padding-bottom: 50px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.firstImage:hover {
+
+-ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2); 
+  transition: 0.9s ease-in-out  all;
+
+}
+
+.animation:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2); 
+  transition: 0.9s ease-in-out  all;
+    
+}
+
+.innerDiv{
+    transition: 0.9s ease-out  all;
+}
+
+ .innerDiv:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2); 
+  transition: 0.9s ease-in-out  all;
+}
+
+th {
+    color: white;
+    padding: 20px;
+}
+
+tr {
+    color: white;
+    padding: 20px;
+}
+
+
+.image-and-login {
+   display: block;
+   margin-left: 300px;
+   margin-top: 150px;
+}
+
+h2{
+    padding-left: 80px;
+}
+
+.form{
+    padding-left: 80px;
+}
+
+
+.profile {
+    display: flex;
+    justify-content: space-around;
+}
+
+.data h5 {
+    display: flex;
+   margin-top: 15px;
+}
+
+.map{
+
+    padding-top: 30px;
+}
+
+table, tr, td, th
+{
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+tr.header
+{
+    cursor:pointer;
+}
+.header .sign:after{
+  content:"+";
+  display:inline-block;      
+}
+.header.expand .sign:after{
+  content:"-";
+ }
+
+
+
+
+
+ 

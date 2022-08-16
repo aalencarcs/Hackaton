@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+      
+    
+    <thymeleaf th:replace="header :: header" />
+
+</head>
+
+<body class="container">
+    <div th:replace="action :: action"></div>
+    <nav class="navbar" style="margin-bottom: 50px;">
+        <!-- LOGO -->
+        <div class="logo">Illegal Aliens </div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Illegal Aliens</a></li>
+
+                <li><a href="add_aliens.html">Add aliens</a></li>
+            </div>
+
+        </ul>
+    </nav>
+
+    <h2 style="color: white; padding-bottom: 30px;">My Sweet Table</h2>
+    <table class="table">
+        <tr>
+            <th>Alien</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Last known location</th>
+            <th>Crime</th>
+            <th>View</th>
+            <th>Delete</th>
+
+        </tr>
+        <tr id="luis" class="header expand">
+
+            <td>Luis</td>
+            <td>Homem Estupendo</td>
+            <td>33</td>
+            <td>Lisbon</td>
+            <td>Murder</td>
+            <td class="hide"><a href="./luis.html">View</a></td>
+            <td ><a href="">Delete</a>
+            </td>
+        </tr>
+        <tr id="pedro">
+            <td>Pedro</td>
+            <td>Jeronimo</td>
+            <td>29</td>
+            <td>Lisbon</td>
+            <td>Abortion</td>
+            <td><a href="./pedro.html">View</a></td>
+            <td><a href="">Delete</a></td>
+        </tr>
+
+        <tr id="joana">
+            <td>Joana</td>
+            <td>Ferreira</td>
+            <td>27</td>
+            <td>Lisbon</td>
+            <td>Murder</td>
+            <td><a href="./Joana.html">View</a></td>
+            <td><a href="">Delete</a></td>
+
+        </tr>
+
+        <tr id="cat">
+            <td>Rita</td>
+            <td>Patacas</td>
+            <td>25</td>
+            <td>Lisbon</td>
+            <td>Abduction</td>
+            <td><a href="./cat.html">View</a></td>
+            <td><a href="">Delete</a></td>
+
+        </tr>
+
+
+
+
+
+    </table>
+
+
+
+
+
+
+
+</body>
+
+</html>

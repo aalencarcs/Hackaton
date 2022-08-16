@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+        <script type="text/javascript">
+            // Popup window code
+            function newPopup(url) {
+                popupWindow = window.open(
+                    url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+            }
+            </script>
+        <style>
+
+            
+
+      
+      .map {
+        height: 300px;
+        width: 75%;
+        margin-left: 70px;
+      }
+      
+    
+
+
+            
+          </style>
+
+<script type="text/javascript">
+    // Popup window code
+    function newPopup(url) {
+        popupWindow = window.open(
+            url,'popUpWindow','height=500,width=1000,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+    }
+    </script>
+          <script>
+        $( "#IdPicture" ).click(function() {
+  alert( "Here are the different information about the picture" );
+});
+          </script>
+
+    <style>
+        .edit-buttons {}
+    </style>
+    <thymeleaf th:replace="header :: header" />
+
+</head>
+
+
+
+
+<body class="container">
+
+    <nav class="navbar">
+        <!-- LOGO -->
+        <li  class="services">
+            <div class="logo"><a href="/" style="color: white;"> Welcome, agent X!</a>
+                <ul class="dropdown">
+                    <li><a href="agent_profile.html" style="color: white;">Agent profile</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="color: white;" >Logout</a></li>
+                </ul>
+        </li>
+
+
+
+
+        </div>
+
+
+
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="track.html">Illegal Aliens</a></li>
+
+                <li><a href="add_aliens.html">Add aliens</a></li>
+            </div>
+
+        </ul>
+    </nav>
+
+    <div>
+        <h3 class="wanted">Pedro Jeronimo
+        </h3>
+    </div>
+
+
+
+    <div class="profile">
+            <div image>
+                <img src="https://i.pinimg.com/222x/d0/47/6d/d0476dd7cca6dcdb32c203b7c5c2b135.jpg"  alt="">
+                <p><a class="pop" href="JavaScript:newPopup('https://media-exp1.licdn.com/dms/image/C4E03AQHyAJaxpVUMKQ/profile-displayphoto-shrink_800_800/0/1649175132304?e=1665014400&v=beta&t=LKkf-HB3iY6-0O77PmKbsUyUx2ISrIHs6fyRAds2hVk');" style="display: flex; size: 100%;">Reveal Human</a></p>
+
+
+
+
+
+
+
+
+            </div>
+            <div class="data">
+                <h5 style="color: white;">Full name: Pedro Jeronimo</h5>
+                <h5 style="color: white;"> Age: 29</h5>
+                <h5 style="color: white;">Crime comited: Abortion</h5>
+                <h5 style="color: white;">Species: Boglodite</h5>
+                <h5 style="color: white;">Planet: Boglodotia</h5>
+                <h5 style="color: white;">Planet: Arquilia</h5>
+            </div>
+
+
+    
+    </div>
+
+    <div class="map">
+
+        <body>
+            <h2 style="color: white;">Last location known</h2>
+            <div id="map" class="map"></div>
+            <script type="text/javascript">
+              var map = new ol.Map({
+                target: 'map',
+                layers: [
+                  new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                  })
+                ],
+                view: new ol.View({
+                  center: ol.proj.fromLonLat([-9.145830, 38.714710]),
+                  zoom: 19
+                
+                })
+              });
+            </script>
+
+      
+
+    </div>
